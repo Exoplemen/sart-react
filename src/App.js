@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Greeting from './components/welcome'
+import MyButtton from'./components/button'
+import ItemList from'./components/itemLi'
+import ItemSelector from './components/itemSelector'
+import BlockColor from './components/color';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Greeting name="Lev"/>
+    <MyButtton label="Запуск ядерных ракет" onClick={()=> alert("Ядерные ракете запущены")}/>
+    <MyButtton label="Экстренная отмена ядерки" onClick={()=> alert("Запуск ядерных ракет отменён")}/>
+    <ItemList items={['яблоко','гранат','чурчхела','Пельмени']}/>
+    <ItemSelector items={['ручка','карандаш','стёрка','пельмени']} onSelect={(element)=> alert(`Вы выбрали ${element}`)}/>
+    <BlockColor color='green'/>
+    <BlockColor color='red'/>
+    <BlockColor color='blue'/>
+    </>
   );
 }
 
