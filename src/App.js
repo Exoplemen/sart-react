@@ -4,6 +4,8 @@ import MyButtton from'./components/button'
 import ItemList from'./components/itemLi'
 import ItemSelector from './components/itemSelector'
 import BlockColor from './components/color';
+import UseEffect from './components/Test';
+import UseRef from './components/UseRef';
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
     <BlockColor color='green'/>
     <BlockColor color='red'/>
     <BlockColor color='blue'/>
+    <UseEffect/>
+    <UseRef/>
     </>
   );
 }
